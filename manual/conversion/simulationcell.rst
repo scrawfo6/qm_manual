@@ -6,12 +6,7 @@ The block specifies the geometry of the cell, how the boundary
 conditions should be handled, and how ewald summation should be broken
 up.
 
-+---+-----------+-----------+-----------+-----------+-----------+
-|   |           |           |           |           |           |
-+---+-----------+-----------+-----------+-----------+-----------+
-|   |           |           |           |           |           |
-+---+-----------+-----------+-----------+-----------+-----------+
-|   |           |           |           |           |           |
+
 +---+-----------+-----------+-----------+-----------+-----------+
 |   | **        | **d       | *         | **        | **desc    |
 |   | parameter | atatype** | *values** | default** | ription** |
