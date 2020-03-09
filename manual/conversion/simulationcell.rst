@@ -140,3 +140,8 @@ where :math:`r_{c}` is the Wigner-Seitz radius, and :math:`k_{c}` is the
 length of the maximum :math:`k`-vector used in the long-ranged term.
 Larger values of increase the accuracy of the evaluation. A value of 15
 tends to be conservative.
+
+.. raw:: latex
+
+ \bibliographystyle{plain}
+ \bibliography{qmcpack_papers.bib}
