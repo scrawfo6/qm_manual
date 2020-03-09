@@ -1,27 +1,27 @@
-Specifying the simulation cell {#chap:simulationcell}
+Specifying the simulation cell [chap:simulationcell]
 ==============================
 
 The block specifies the geometry of the cell, how the boundary
 conditions should be handled, and how ewald summation should be broken
 up.
 
-  -- -------------------- -------------- ------------ ------------------- ----------------------------------------------------
-                                                                          
-                                                                          
-                                                                          
-     **parameter name**   **datatype**   **values**   **default**         **description**
-     `lattice`            9 floats       any float    Must be specified   Specification of
-                                                                          lattice vectors.
-     `bconds`             string         "p" or "n"   "n n n"             Boundary conditions
-                                                                          for each axis.
-     `vacuum`             float          $\ge 1.0$    1.0                 Vacuum scale.
-     `LR_dim_cutoff`      float          float        15                  Ewald breakup distance.
-     `LR_tol`             float          float        3e-4                Tolerance in Ha for Ewald ion-ion energy per atom.
-  -- -------------------- -------------- ------------ ------------------- ----------------------------------------------------
+|     |                    |              |            |                   |                                                    |
+|:----|:-------------------|:-------------|:-----------|:------------------|:---------------------------------------------------|
+|     |                    |              |            |                   |                                                    |
+|     |                    |              |            |                   |                                                    |
+|     |                    |              |            |                   |                                                    |
+|     | **parameter name** | **datatype** | **values** | **default**       | **description**                                    |
+|     | `lattice`          | 9 floats     | any float  | Must be specified | Specification of                                   |
+|     |                    |              |            |                   | lattice vectors.                                   |
+|     | `bconds`           | string       | “p” or “n” | “n n n”           | Boundary conditions                                |
+|     |                    |              |            |                   | for each axis.                                     |
+|     | `vacuum`           | float        | $\ge 1.0$  | 1.0               | Vacuum scale.                                      |
+|     | `LR_dim_cutoff`    | float        | float      | 15                | Ewald breakup distance.                            |
+|     | `LR_tol`           | float        | float      | 3e-4              | Tolerance in Ha for Ewald ion-ion energy per atom. |
 
 An example of a block is given below:
 
-``` {style="QMCPXML"}
+```
 <simulationcell>
     <parameter name="lattice">
       3.8       0.0       0.0
@@ -49,24 +49,24 @@ Boundary conditions
 
 QMCPACK offers the capability to use a mixture of open and periodic
 boundary conditions. The parameter expects a single string of three
-characters separated by spaces, *e.g.* "p p p" for purely periodic
+characters separated by spaces, *e.g.* “p p p” for purely periodic
 boundary conditions. These characters control the behavior of the $x$,
 $y$, and $z$, axes, respectively. Non periodic directions must be placed
 after the periodic ones. Examples of valid include:
 
-"p p p"
+“p p p”
 
 :   Periodic boundary conditions. Corresponds to a 3D crystal.
 
-"p p n"
+“p p n”
 
 :   Slab geometry. Corresponds to a 2D crystal.
 
-"p n n"
+“p n n”
 
 :   Wire geometry. Corresponds to a 1D crystal.
 
-"n n n"
+“n n n”
 
 :   Open boundary conditions. Corresponds to an isolated molecule in a
     vacuum.
@@ -94,7 +94,7 @@ specified axes.
 An example of a block using is given below. The size of the box along
 the z-axis increases from 12 to 18 by the vacuum scale of 1.5.
 
-``` {style="QMCPXML"}
+```
 <simulationcell>
     <parameter name="lattice">
       3.8       0.0       0.0
@@ -115,7 +115,7 @@ LR\_dim\_cutoff
 When using periodic boundary conditions direct calculation of the
 Coulomb energy is not well behaved. As a result, QMCPACK uses an
 optimized Ewald summation technique to compute the Coulomb
-interaction.[@Natoli1995]
+interaction.`\cite{Natoli1995}`{=latex}
 
 In the Ewald summation, the energy is broken into short- and long-ranged
 terms. The short-ranged term is computed directly in real space, while
