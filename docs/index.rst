@@ -1,3 +1,3 @@
 test
 
-simulationcell.rst
+:doc: `simulationcell.rst`
