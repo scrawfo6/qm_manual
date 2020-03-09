@@ -64,7 +64,7 @@ An example of a block is given below:
 
 Here, a cubic cell 3.8 bohr on a side will be used. This simulation will
 use periodic boundary conditions, and the maximum :math:`k` vector will
-be :math:`\\frac{20/r_{wigner-seitz}}` of the cell.
+be :math:`\\frac{20/r_wigner-seitz}` of the cell.
 
 Lattice
 -------
