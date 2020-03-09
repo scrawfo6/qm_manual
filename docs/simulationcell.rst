@@ -25,32 +25,6 @@ up.
    "LR_dim_cutoff", "float", "float", "15", "Ewald breakup distance."
    "LR_tol", "float", "float", :math:`3e-4` , "Tolerance in Ha for Ewald ion-ion energy per atom."
 
-.. raw:: latex
-
-\begin{table}[h]
-\begin{center}
-\begin{tabularx}{\textwidth}{l l l l l X }
-\hline
-\multicolumn{6}{l}{\texttt{simulationcell} element} \\
-\hline
-\multicolumn{2}{l}{parent elements:} & \multicolumn{4}{l}{\texttt{qmcsystem}}\\
-\multicolumn{2}{l}{child  elements:} & \multicolumn{4}{l}{None}\\
-\multicolumn{2}{l}{attribute      :} & \multicolumn{4}{l}{}\\
-   &   \bfseries parameter name            & \bfseries datatype & \bfseries values & \bfseries default   & \bfseries description \\
-\hline
-   &   \texttt{lattice}  & 9 floats & any float & Must be specified & Specification of \\
-   &                     &        &             &                   & lattice vectors. \\
-   &   \texttt{bconds}   & string & ``p'' or ``n''  & ``n n n'' & Boundary conditions \\
-   &                     &        &             &           & for each axis. \\
-   &   \texttt{vacuum} & float & $\ge 1.0$ & 1.0        & Vacuum scale. \\
-   &   \texttt{LR\_dim\_cutoff} & float & float & 15        & Ewald breakup distance. \\
-   &   \texttt{LR\_tol} & float & float & 3e-4        & Tolerance in Ha for Ewald ion-ion energy per atom. \\
-\hline
-\end{tabularx}
-\end{center}
-\end{table}
-
-
 
 An example of a block is given below:
 
