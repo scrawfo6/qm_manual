@@ -1,3 +1,3 @@
 test
 
-* :ref: `simulationcell.rst`
+simulationcell.rst
