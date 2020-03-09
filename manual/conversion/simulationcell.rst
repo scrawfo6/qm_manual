@@ -126,7 +126,7 @@ LR_dim_cutoff
 When using periodic boundary conditions direct calculation of the
 Coulomb energy is not well behaved. As a result, QMCPACK uses an
 optimized Ewald summation technique to compute the Coulomb
-interaction.:raw-latex:`\cite{Natoli1995}`
+interaction. raw-tex:`\cite{Natoli1995}`
 
 In the Ewald summation, the energy is broken into short- and long-ranged
 terms. The short-ranged term is computed directly in real space, while
@@ -140,6 +140,10 @@ where :math:`r_{c}` is the Wigner-Seitz radius, and :math:`k_{c}` is the
 length of the maximum :math:`k`-vector used in the long-ranged term.
 Larger values of increase the accuracy of the evaluation. A value of 15
 tends to be conservative.
+
+.. STC: Added biblio below.
+   Probably only works in Sphinx
+   See: https://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx/UsingBibTeXCitationsInSphinx.html
 
 .. raw:: latex
 
