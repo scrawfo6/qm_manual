@@ -1,5 +1,5 @@
 
-Specifying the simulation cell
+Specifying the Simulation Cell
 ==============================
 
 The block specifies the geometry of the cell, how the boundary
