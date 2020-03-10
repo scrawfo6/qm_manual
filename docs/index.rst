@@ -12,13 +12,3 @@ QMC Manual Test Documentation
 
    simulationcell
    ...
-
-
-
-# Indices and tables
-====================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-* :ref:`simulationcell`
