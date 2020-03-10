@@ -1,3 +1,4 @@
+.. _sec:simulationcell:
 
 Specifying the Simulation Cell
 ==============================

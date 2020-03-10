@@ -11,4 +11,5 @@ QMC Manual Test Documentation
    :caption: Contents:
 
    simulationcell
+   particleset
    ...

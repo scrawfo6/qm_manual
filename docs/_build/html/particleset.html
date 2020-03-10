@@ -1,0 +1,490 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Specifying the Particle Set &#8212; qm_manual 0.0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Specifying the Simulation Cell" href="simulationcell.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="specifying-the-particle-set">
+<span id="sec-particleset"></span><h1>Specifying the Particle Set<a class="headerlink" href="#specifying-the-particle-set" title="Permalink to this headline">¶</a></h1>
+<p>The blocks specify the particles in the QMC simulations: their types,
+attributes (mass, charge, valence), and positions.</p>
+<div class="section" id="input-specification">
+<h2>Input Specification<a class="headerlink" href="#input-specification" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="particleset-elements">
+<h3>Particleset Elements:<a class="headerlink" href="#particleset-elements" title="Permalink to this headline">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 51%" />
+<col style="width: 49%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Parent elements:</p></td>
+<td><p>simulation</p></td>
+</tr>
+<tr class="row-even"><td><p>Child elements:</p></td>
+<td><p>group, attrib</p></td>
+</tr>
+</tbody>
+</table>
+<p>Attributes:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 10%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 38%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Name</strong></p></td>
+<td><p><strong>Datatype</strong></p></td>
+<td><p><strong>Values</strong></p></td>
+<td><p><strong>Default</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>name/ID</p></td>
+<td><p>Text</p></td>
+<td><p><em>any</em></p></td>
+<td><p>e</p></td>
+<td><p>Name of particle set.</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(size^0\)</span></p></td>
+<td><p>Integer</p></td>
+<td><p><em>any</em></p></td>
+<td><p>0</p></td>
+<td><p>Number of particles in set.</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(random^0\)</span></p></td>
+<td><p>Text</p></td>
+<td><p>Yes/No</p></td>
+<td><p>No</p></td>
+<td><p>Randomize starting positions.</p></td>
+</tr>
+<tr class="row-odd"><td><p>randomsrc/random_source:math:<cite>^0</cite></p></td>
+<td><p>Text</p></td>
+<td><p>particleset.name</p></td>
+<td><p><em>None</em></p></td>
+<td><p>Particle set to randomize.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="group-elements">
+<h3>Group Elements:<a class="headerlink" href="#group-elements" title="Permalink to this headline">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 51%" />
+<col style="width: 49%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Parent elements:</p></td>
+<td><p>particleset</p></td>
+</tr>
+<tr class="row-even"><td><p>Child elements:</p></td>
+<td><p>parameter, attrib</p></td>
+</tr>
+</tbody>
+</table>
+<p>Attributes:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 10%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 38%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Name</strong></p></td>
+<td><p><strong>Datatype</strong></p></td>
+<td><p><strong>Values</strong></p></td>
+<td><p><strong>Default</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>name</p></td>
+<td><p>Text</p></td>
+<td><p><em>any</em></p></td>
+<td><p>e</p></td>
+<td><p>Name of particle set.</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(size^0\)</span></p></td>
+<td><p>Integer</p></td>
+<td><p><em>any</em></p></td>
+<td><p>0</p></td>
+<td><p>Number of particles in set.</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(mass^0\)</span></p></td>
+<td><p>Real</p></td>
+<td><p><em>any</em></p></td>
+<td><p>1</p></td>
+<td><p>Mass of particles in set.</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(unit^0\)</span></p></td>
+<td><p>Text</p></td>
+<td><p>au/amu</p></td>
+<td><p>au</p></td>
+<td><p>Units for mass of particles.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Parameters:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 10%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 38%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Name</strong></p></td>
+<td><p><strong>Datatype</strong></p></td>
+<td><p><strong>Values</strong></p></td>
+<td><p><strong>Default</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>charge</p></td>
+<td><p>Real</p></td>
+<td><p><em>any</em></p></td>
+<td><p>0</p></td>
+<td><p>Charge of particles in set.</p></td>
+</tr>
+<tr class="row-odd"><td><p>valence</p></td>
+<td><p>Real</p></td>
+<td><p><em>any</em></p></td>
+<td><p>0</p></td>
+<td><p>Valence charge of particles in set.</p></td>
+</tr>
+<tr class="row-even"><td><p>atomicnumber</p></td>
+<td><p>Integer</p></td>
+<td><p><em>any</em></p></td>
+<td><p>0</p></td>
+<td><p>Atomic number of particles in set.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="attrib-elements">
+<h3>Attrib Elements:<a class="headerlink" href="#attrib-elements" title="Permalink to this headline">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 51%" />
+<col style="width: 49%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Parent elements:</p></td>
+<td><p>particleset, group</p></td>
+</tr>
+</tbody>
+</table>
+<p>Attributes:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 10%" />
+<col style="width: 17%" />
+<col style="width: 12%" />
+<col style="width: 37%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Name</strong></p></td>
+<td><p><strong>Datatype</strong></p></td>
+<td><p><strong>Values</strong></p></td>
+<td><p><strong>default</strong></p></td>
+<td><p><strong>description</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>name</p></td>
+<td><p>String</p></td>
+<td><p><em>any</em></p></td>
+<td><p>None</p></td>
+<td><p>Name of attrib.</p></td>
+</tr>
+<tr class="row-odd"><td><p>datatype</p></td>
+<td><p>String</p></td>
+<td><p>IntArray, realArray
+posArray, stringArray</p></td>
+<td><p>None</p></td>
+<td><p>Type of data in attrib.</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(size^0\)</span></p></td>
+<td><p>String</p></td>
+<td><p><em>any</em></p></td>
+<td><p>None</p></td>
+<td><p>Size of data in attrib.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="detailed-attribute-description">
+<h2>Detailed Attribute Description<a class="headerlink" href="#detailed-attribute-description" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="required-particleset-attributes">
+<h3>Required Particleset Attributes<a class="headerlink" href="#required-particleset-attributes" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">name/id</span></code></div>
+<div class="line">Unique name for the particle set. Default is “e” for electrons. “i”
+or “ion0” is typically used for ions. For special cases where an
+empty particle set is needed, the special name “empty” can be used
+to bypass the zero-size error check.</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="optional-particleset-attributes">
+<h3>Optional particleset attributes<a class="headerlink" href="#optional-particleset-attributes" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">size</span></code></div>
+<div class="line">Number of particles in set.</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">random</span></code></div>
+<div class="line">Randomize starting positions of particles. Each component of each
+particle’s position is randomized independently in the range of the
+simulation cell in that component’s direction.</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">randomsrc/random_source</span></code></div>
+<div class="line">Specify source particle set around which to randomize the initial
+positions of this particle set.</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="required-name-attributes">
+<h3>Required name attributes<a class="headerlink" href="#required-name-attributes" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">name/id</span></code></div>
+<div class="line">Unique name for the particle set group. Typically, element symbols
+are used for ions and “u” or “d” for spin-up and spin-down electron
+groups, respectively.</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="optional-group-attributes">
+<h3>Optional group attributes<a class="headerlink" href="#optional-group-attributes" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">mass</span></code></div>
+<div class="line">Mass of particles in set.</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">unit</span></code></div>
+<div class="line">Units for mass of particles in set (au[<span class="math notranslate nohighlight">\(m_e\)</span> = 1] or
+amu[<span class="math notranslate nohighlight">\(\frac{1}{12}m_{\rm ^{12}C}\)</span> = 1]).</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="example-use-cases">
+<h2>Example use cases<a class="headerlink" href="#example-use-cases" title="Permalink to this headline">¶</a></h2>
+<p>Particleset elements for ions and electrons randomizing electron start positions.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">particleset</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;i&quot;</span> <span class="n">size</span><span class="o">=</span><span class="s2">&quot;2&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">group</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Li&quot;</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">parameter</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;charge&quot;</span><span class="o">&gt;</span><span class="mf">3.000000</span><span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">parameter</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;valence&quot;</span><span class="o">&gt;</span><span class="mf">3.000000</span><span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">parameter</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;atomicnumber&quot;</span><span class="o">&gt;</span><span class="mf">3.000000</span><span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">group</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">group</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;H&quot;</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">parameter</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;charge&quot;</span><span class="o">&gt;</span><span class="mf">1.000000</span><span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">parameter</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;valence&quot;</span><span class="o">&gt;</span><span class="mf">1.000000</span><span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">parameter</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;atomicnumber&quot;</span><span class="o">&gt;</span><span class="mf">1.000000</span><span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">group</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">attrib</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;position&quot;</span> <span class="n">datatype</span><span class="o">=</span><span class="s2">&quot;posArray&quot;</span> <span class="n">condition</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="o">&gt;</span>
+    <span class="mf">0.0</span>   <span class="mf">0.0</span>   <span class="mf">0.0</span>
+    <span class="mf">0.5</span>   <span class="mf">0.5</span>   <span class="mf">0.5</span>
+    <span class="o">&lt;/</span><span class="n">attrib</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">attrib</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;ionid&quot;</span> <span class="n">datatype</span><span class="o">=</span><span class="s2">&quot;stringArray&quot;</span><span class="o">&gt;</span>
+       <span class="n">Li</span> <span class="n">H</span>
+    <span class="o">&lt;/</span><span class="n">attrib</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">particleset</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">particleset</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;e&quot;</span> <span class="n">random</span><span class="o">=</span><span class="s2">&quot;yes&quot;</span> <span class="n">randomsrc</span><span class="o">=</span><span class="s2">&quot;i&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">group</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;u&quot;</span> <span class="n">size</span><span class="o">=</span><span class="s2">&quot;2&quot;</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">parameter</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;charge&quot;</span><span class="o">&gt;-</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">group</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">group</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;d&quot;</span> <span class="n">size</span><span class="o">=</span><span class="s2">&quot;2&quot;</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">parameter</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;charge&quot;</span><span class="o">&gt;-</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">group</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">particleset</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Particleset elements for ions and electrons specifying electron start positions.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">particleset</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;e&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">group</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;u&quot;</span> <span class="n">size</span><span class="o">=</span><span class="s2">&quot;4&quot;</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">parameter</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;charge&quot;</span><span class="o">&gt;-</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">attrib</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;position&quot;</span> <span class="n">datatype</span><span class="o">=</span><span class="s2">&quot;posArray&quot;</span><span class="o">&gt;</span>
+    <span class="mf">2.9151687332e-01</span> <span class="o">-</span><span class="mf">6.5123272502e-01</span> <span class="o">-</span><span class="mf">1.2188463918e-01</span>
+    <span class="mf">5.8423636048e-01</span>  <span class="mf">4.2730406357e-01</span> <span class="o">-</span><span class="mf">4.5964306231e-03</span>
+    <span class="mf">3.5228575807e-01</span> <span class="o">-</span><span class="mf">3.5027014639e-01</span>  <span class="mf">5.2644808295e-01</span>
+       <span class="o">-</span><span class="mf">5.1686250912e-01</span> <span class="o">-</span><span class="mf">1.6648002292e+00</span>  <span class="mf">6.5837023441e-01</span>
+      <span class="o">&lt;/</span><span class="n">attrib</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">group</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">group</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;d&quot;</span> <span class="n">size</span><span class="o">=</span><span class="s2">&quot;4&quot;</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">parameter</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;charge&quot;</span><span class="o">&gt;-</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">attrib</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;position&quot;</span> <span class="n">datatype</span><span class="o">=</span><span class="s2">&quot;posArray&quot;</span><span class="o">&gt;</span>
+    <span class="mf">3.1443445436e-01</span>  <span class="mf">6.5068682609e-01</span> <span class="o">-</span><span class="mf">4.0983449009e-02</span>
+       <span class="o">-</span><span class="mf">3.8686061749e-01</span> <span class="o">-</span><span class="mf">9.3744432997e-02</span> <span class="o">-</span><span class="mf">6.0456005388e-01</span>
+    <span class="mf">2.4978241724e-02</span> <span class="o">-</span><span class="mf">3.2862514649e-02</span> <span class="o">-</span><span class="mf">7.2266047173e-01</span>
+       <span class="o">-</span><span class="mf">4.0352404772e-01</span>  <span class="mf">1.1927734805e+00</span>  <span class="mf">5.5610824921e-01</span>
+      <span class="o">&lt;/</span><span class="n">attrib</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">group</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">particleset</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">particleset</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;ion0&quot;</span> <span class="n">size</span><span class="o">=</span><span class="s2">&quot;3&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">group</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;O&quot;</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">parameter</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;charge&quot;</span><span class="o">&gt;</span><span class="mi">6</span><span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">parameter</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;valence&quot;</span><span class="o">&gt;</span><span class="mi">4</span><span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">parameter</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;atomicnumber&quot;</span><span class="o">&gt;</span><span class="mi">8</span><span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">group</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">group</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;H&quot;</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">parameter</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;charge&quot;</span><span class="o">&gt;</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">parameter</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;valence&quot;</span><span class="o">&gt;</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">parameter</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;atomicnumber&quot;</span><span class="o">&gt;</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">group</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">attrib</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;position&quot;</span> <span class="n">datatype</span><span class="o">=</span><span class="s2">&quot;posArray&quot;</span><span class="o">&gt;</span>
+      <span class="mf">0.0000000000e+00</span>  <span class="mf">0.0000000000e+00</span>  <span class="mf">0.0000000000e+00</span>
+      <span class="mf">0.0000000000e+00</span> <span class="o">-</span><span class="mf">1.4308249289e+00</span>  <span class="mf">1.1078707576e+00</span>
+      <span class="mf">0.0000000000e+00</span>  <span class="mf">1.4308249289e+00</span>  <span class="mf">1.1078707576e+00</span>
+    <span class="o">&lt;/</span><span class="n">attrib</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">attrib</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;ionid&quot;</span> <span class="n">datatype</span><span class="o">=</span><span class="s2">&quot;stringArray&quot;</span><span class="o">&gt;</span>
+      <span class="n">O</span> <span class="n">H</span> <span class="n">H</span>
+    <span class="o">&lt;/</span><span class="n">attrib</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">particleset</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Particleset elements for ions specifying positions by ion type.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">particleset</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;ion0&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">group</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;O&quot;</span> <span class="n">size</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">parameter</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;charge&quot;</span><span class="o">&gt;</span><span class="mi">6</span><span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">parameter</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;valence&quot;</span><span class="o">&gt;</span><span class="mi">4</span><span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">parameter</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;atomicnumber&quot;</span><span class="o">&gt;</span><span class="mi">8</span><span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">attrib</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;position&quot;</span> <span class="n">datatype</span><span class="o">=</span><span class="s2">&quot;posArray&quot;</span><span class="o">&gt;</span>
+        <span class="mf">0.0000000000e+00</span>  <span class="mf">0.0000000000e+00</span>  <span class="mf">0.0000000000e+00</span>
+      <span class="o">&lt;/</span><span class="n">attrib</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">group</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">group</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;H&quot;</span> <span class="n">size</span><span class="o">=</span><span class="s2">&quot;2&quot;</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">parameter</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;charge&quot;</span><span class="o">&gt;</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">parameter</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;valence&quot;</span><span class="o">&gt;</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">parameter</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;atomicnumber&quot;</span><span class="o">&gt;</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">attrib</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;position&quot;</span> <span class="n">datatype</span><span class="o">=</span><span class="s2">&quot;posArray&quot;</span><span class="o">&gt;</span>
+        <span class="mf">0.0000000000e+00</span> <span class="o">-</span><span class="mf">1.4308249289e+00</span>  <span class="mf">1.1078707576e+00</span>
+        <span class="mf">0.0000000000e+00</span>  <span class="mf">1.4308249289e+00</span>  <span class="mf">1.1078707576e+00</span>
+      <span class="o">&lt;/</span><span class="n">attrib</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">group</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">particleset</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">qm_manual</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="simulationcell.html">Specifying the Simulation Cell</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Specifying the Particle Set</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#input-specification">Input Specification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#detailed-attribute-description">Detailed Attribute Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-use-cases">Example use cases</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="simulationcell.html" title="previous chapter">Specifying the Simulation Cell</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Sam C..
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/particleset.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
