@@ -10,8 +10,18 @@ QMC Manual Test Documentation
    :maxdepth: 2
    :caption: Contents:
 
-==============================
-Test Documentation
+
+
+# Indices and tables
+====================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+* :ref:`simulationcell`
+
+
+# Test Documentation
 ==============================
 
 :doc:`simulationcell`
