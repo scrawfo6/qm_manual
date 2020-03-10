@@ -36,7 +36,7 @@ import sys, os
 
 sys.path.append(os.path.abspath('exts'))
 
-extensions = ['sphinxcontrib.bibtex.py']
+extensions = ['sphinxcontrib.bibtex']
 
 
 # Add any paths that contain templates here, relative to this directory.
