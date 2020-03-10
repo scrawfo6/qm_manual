@@ -6,24 +6,29 @@ The block specifies the geometry of the cell, how the boundary
 conditions should be handled, and how ewald summation should be broken
 up.
 
-.. nested tables aren't allowed.
+Simulationcell Element
 
-.. csv-table:: Simulation Cell Element
-   :header: "", ""
-   :widths: 10, 10
++-----------------+-----------+
+|Parent elements: | qmcsystem |
++-----------------------------+
+|Child elements:  | None      |
++-----------------+-----------+
 
-   "parent elements:", "qmcsystem"
-   "child elements", "none"
+Attribute:
 
-.. csv-table::
-   :header: "parameter name", "datatype", "values", "default", "description"
-   :widths: 10, 10, 10, 10, 30
-
-   "lattice", "9 floats", "any floats", "Must be specified", "Specification of lattice vectors."
-   "bconds", "string", "p or n", "n n n", "Boundary conditions for each axis."
-   "vacuum", "float", :math:`\geq 1.0`, "1.0", "Vacuum scale."
-   "LR_dim_cutoff", "float", "float", "15", "Ewald breakup distance."
-   "LR_tol", "float", "float", :math:`3e-4` , "Tolerance in Ha for Ewald ion-ion energy per atom."
++----------------+--------------+-----------------+-------------------+----------------------------------------------------+
+| parameter name | **datatype** | **values**      | **default**       | **description**                                    |
++----------------+--------------+-----------------+-------------------+----------------------------------------------------+
+| lattice        | 9 floats     | any float       | Must be specified | Specification of lattice vectors.                  |
++----------------+--------------+-----------------+-------------------+----------------------------------------------------+
+| bconds         | string       | "p" or "n"      | "n n n"           | Boundary conditions for each axis                  |
++----------------+--------------+-----------------+-------------------+----------------------------------------------------+
+| vacuum         | float        | :math:`\geq 1.0`| 1.0               | Vacuum scale.                                      |
++----------------+--------------+-----------------+-------------------+----------------------------------------------------+
+| LR_dim_cutoff  | float        | float           | 15                | Ewald breakup distance.                            |
++----------------+--------------+-----------------+-------------------+----------------------------------------------------+     
+| LR_tol         | float        | float           | :math:`3e-4`      | Tolerance in Ha for Ewald ion-ion energy per atom. |
++----------------+--------------+-----------------+-------------------+----------------------------------------------------+
 
 
 An example of a block is given below:

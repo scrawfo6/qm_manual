@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to qm_manual's documentation!
+QMC Manual Test Documentation
 =====================================
 
 .. toctree::
@@ -24,4 +24,4 @@ Test Documentation
 ==============================
 
 :doc:`simulationcell`
-    Test document description.
+    Specifying the Simulation Cell
