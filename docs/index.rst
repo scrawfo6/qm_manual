@@ -18,15 +18,9 @@ QMC Manual Test Documentation
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-* :ref:`simulationcell`
 
 
 Test Documentation
 ==============================
 
 :doc:`simulationcell`
-    Specifying the Simulation Cell
-
-.. Trying to get the format right.
-
-:Specifying the Simulation Cell: `simulationcell`
