@@ -124,9 +124,7 @@ LR_dim_cutoff
 When using periodic boundary conditions direct calculation of the
 Coulomb energy is not well behaved. As a result, QMCPACK uses an
 optimized Ewald summation technique to compute the Coulomb
-interaction. :cite:`vincent2007`
-
-.. :cite:`Natoli1995`
+interaction. :cite:`Natoli1995`
 
 In the Ewald summation, the energy is broken into short- and long-ranged
 terms. The short-ranged term is computed directly in real space, while
@@ -145,4 +143,4 @@ tends to be conservative.
    Probably only works in Sphinx
    See: https://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx/UsingBibTeXCitationsInSphinx.html
 
-.. bibliography:: test.bib
+.. bibliography:: bibliography.bib
