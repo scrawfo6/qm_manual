@@ -1,5 +1,5 @@
 
-Specifying the simulation cell
+Specifying the Simulation Cell
 ==============================
 
 The block specifies the geometry of the cell, how the boundary
@@ -10,11 +10,11 @@ Simulationcell Elements:
 
 +------------------+-----------+
 | Parent elements: | qmcsystem |
-+------------------------------+
++------------------+-----------+
 | Child elements:  | None      |
 +------------------+-----------+
 
-Attribute:
+Attributes:
 
 +----------------+--------------+-----------------+-------------------+----------------------------------------------------+
 | parameter name | **datatype** | **values**      | **default**       | **description**                                    |
