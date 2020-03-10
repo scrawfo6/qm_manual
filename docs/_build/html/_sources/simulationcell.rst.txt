@@ -6,13 +6,13 @@ The block specifies the geometry of the cell, how the boundary
 conditions should be handled, and how ewald summation should be broken
 up.
 
-Simulationcell Element
+Simulationcell Elements:
 
-+-----------------+-----------+
-|Parent elements: | qmcsystem |
-+-----------------------------+
-|Child elements:  | None      |
-+-----------------+-----------+
++------------------+-----------+
+| Parent elements: | qmcsystem |
++------------------------------+
+| Child elements:  | None      |
++------------------+-----------+
 
 Attribute:
 
@@ -26,7 +26,7 @@ Attribute:
 | vacuum         | float        | :math:`\geq 1.0`| 1.0               | Vacuum scale.                                      |
 +----------------+--------------+-----------------+-------------------+----------------------------------------------------+
 | LR_dim_cutoff  | float        | float           | 15                | Ewald breakup distance.                            |
-+----------------+--------------+-----------------+-------------------+----------------------------------------------------+     
++----------------+--------------+-----------------+-------------------+----------------------------------------------------+
 | LR_tol         | float        | float           | :math:`3e-4`      | Tolerance in Ha for Ewald ion-ion energy per atom. |
 +----------------+--------------+-----------------+-------------------+----------------------------------------------------+
 
