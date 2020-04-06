@@ -3,7 +3,7 @@
 Specifying the Particle Set
 ===========================
 
-The blocks specify the particles in the QMC simulations: their types,
+The ``particleset`` blocks specify the particles in the QMC simulations: their types,
 attributes (mass, charge, valence), and positions.
 
 Input Specification
