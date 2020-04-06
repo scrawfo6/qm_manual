@@ -3,7 +3,7 @@
 Specifying the Simulation Cell
 ==============================
 
-The block specifies the geometry of the cell, how the boundary
+The :code:`simulationcell` block specifies the geometry of the cell, how the boundary
 conditions should be handled, and how ewald summation should be broken
 up.
 
@@ -32,7 +32,7 @@ Attributes:
 +----------------+--------------+-----------------+-------------------+----------------------------------------------------+
 
 
-An example of a block is given below:
+An example of a :code:`simulationcell` block is given below:
 
 ::
 
@@ -61,11 +61,11 @@ Boundary conditions
 -------------------
 
 QMCPACK offers the capability to use a mixture of open and periodic
-boundary conditions. The parameter expects a single string of three
-characters separated by spaces, *e.g.* “p p p” for purely periodic
+boundary conditions. The :code:`bconds` parameter expects a single string of three
+characters separated by spaces, *e.g.,* “p p p” for purely periodic
 boundary conditions. These characters control the behavior of the
 :math:`x`, :math:`y`, and :math:`z`, axes, respectively. Non periodic
-directions must be placed after the periodic ones. Examples of valid
+directions must be placed after the periodic ones. Examples of valid :code:`bconds`
 include:
 
 “p p p”
@@ -85,7 +85,7 @@ Vacuum
 ------
 
 The vacuum option allows adding a vacuum region in slab or wire boundary
-conditions ( or , respectively). The main use is to save memory with
+conditions (:code:`bconds = p p n` or :code:`bconds = p n n` , respectively). The main use is to save memory with
 spline or plane-wave basis trial wavefunctions, because no basis
 functions are required inside the vacuum region. For example, a large
 vacuum region can be added above and below a graphene sheet without
@@ -96,12 +96,12 @@ sufficiently reduce periodic interactions in the underlying electronic
 structure calculation.
 
 With the vacuum option, the box used for Ewald summation increases along
-the axis labeled by a factor of . Note that all the particles remain in
+the axis labeled :code:`n` by a factor of :code:`vacuum`. Note that all the particles remain in
 the original box without altering their positions. i.e. Bond lengths are
 not changed by this option. The default value is 1, no change to the
 specified axes.
 
-An example of a block using is given below. The size of the box along
+An example of a :code:`simulationcell` block using :code:`vacuum` is given below. The size of the box along
 the z-axis increases from 12 to 18 by the vacuum scale of 1.5.
 
 ::
@@ -129,15 +129,15 @@ interaction. :cite:`Natoli1995`
 
 In the Ewald summation, the energy is broken into short- and long-ranged
 terms. The short-ranged term is computed directly in real space, while
-the long-ranged term is computed in reciprocal space. controls where the
+the long-ranged term is computed in reciprocal space. :code:`LR_dim_cutoff` controls where the
 short-ranged term ends and the long-ranged term begins. The real-space
-cutoff, reciprocal-space cutoff, and are related via:
+cutoff, reciprocal-space cutoff, and :code:`LR_dim_cutoff` are related via:
 
 .. math:: \mathrm{LR\_dim\_cutoff} = r_{c} \times k_{c}
 
 where :math:`r_{c}` is the Wigner-Seitz radius, and :math:`k_{c}` is the
 length of the maximum :math:`k`-vector used in the long-ranged term.
-Larger values of increase the accuracy of the evaluation. A value of 15
+Larger values of :code:`LR_dim_cutoff` increase the accuracy of the evaluation. A value of 15
 tends to be conservative.
 
 .. STC: Added biblio below.
